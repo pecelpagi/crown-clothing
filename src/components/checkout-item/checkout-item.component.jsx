@@ -4,6 +4,7 @@ import { selectCartItems } from '../../store/cart/cart.selector';
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from '../../store/cart/cart.action';
 
 import './checkout-item.styles.scss';
+import { memo } from 'react';
 
 const CheckoutItem = ({ cartItem }) => {
     const { name, imageUrl, price, quantity } = cartItem;
@@ -37,4 +38,4 @@ const CheckoutItem = ({ cartItem }) => {
     );
 }
 
-export default CheckoutItem;
+export default memo(CheckoutItem);
